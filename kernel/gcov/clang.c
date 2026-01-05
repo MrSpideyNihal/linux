@@ -104,6 +104,9 @@ EXPORT_SYMBOL(llvm_gcov_init);
 
 void llvm_gcda_start_file(const char *orig_filename, u32 version, u32 checksum)
 {
+	if (!current_info)
+		return;
+	
 	current_info->filename = orig_filename;
 	current_info->version = version;
 	current_info->checksum = checksum;
