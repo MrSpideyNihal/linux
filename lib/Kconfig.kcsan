@@ -191,7 +191,7 @@ config KCSAN_WEAK_MEMORY
 
 	  Depends on KCSAN_STRICT, because the options strengthening certain
 	  plain accesses by default (depending on !KCSAN_STRICT) reduce the
-	  ability to detect any data races invoving reordered accesses, in
+	  ability to detect any data races involving reordered accesses, in
 	  particular reordered writes.
 
 	  Weak memory modeling relies on additional instrumentation and may
